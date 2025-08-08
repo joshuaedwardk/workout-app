@@ -1,23 +1,20 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { supabase } from "@/lib/supabase";
-import { useRouter } from "next/navigation";
+import { useState } from 'react';
+import { supabase } from '@/lib/supabase';
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const router = useRouter();
 
   const handleLogin = async () => {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
       alert(error.message);
     } else {
-      router.push("/dashboard");
+      router.push('/dashboard');
     }
   };
 
@@ -42,12 +39,6 @@ export default function Login() {
       >
         Sign In
       </button>
-      <p className="mt-4 text-sm">
-        Don't have an account?{" "}
-        <a href="/signup" className="text-blue-600">
-          Sign up
-        </a>
-      </p>
     </div>
   );
 }
