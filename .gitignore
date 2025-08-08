@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
 
+# Next.js build output
+/.next/
+
 # other common files to ignore
 .DS_Store
 .env*
