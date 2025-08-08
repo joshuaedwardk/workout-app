@@ -3,8 +3,10 @@ import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
 
 export default function AddWorkout() {
-  const [name, setName] = useState('');
-  const [category, setCategory] = useState('');
+  const [workoutname, setName] = useState('');
+  const [workoutcategory, setCategory] = useState('');
+  const [bodycategory1, setBodycategory1] = useState('');
+  const [bodycategory2, setBodycategory2] = useState('');
   const [message, setMessage] = useState('');
 
   const handleAdd = async () => {
@@ -15,8 +17,10 @@ export default function AddWorkout() {
     const { error } = await supabase.from('workouts').insert([
       {
         user_id: user?.id,
-        name,
-        category,
+        workoutname,
+        workoutcategory,
+        bodycategory1,
+        bodycategory2,
       },
     ]);
 
@@ -36,6 +40,16 @@ export default function AddWorkout() {
         placeholder="Category"
         onChange={(e) => setCategory(e.target.value)}
       />
+      <input
+        className="border p-2 mr-2"
+        placeholder='Body Category #1'
+        onChange={(e) => setBodycategory1(e.target.value)}
+        />
+         <input
+        className="border p-2 mr-2"
+        placeholder='Body Category #2'
+        onChange={(e) => setBodycategory2(e.target.value)}
+        />
       <button onClick={handleAdd} className="bg-green-600 text-white px-3 py-2">
         Add Workout
       </button>
