@@ -19,8 +19,8 @@ export default function Login() {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h2 className="text-xl font-bold mb-4">Login</h2>
+    <div className="bg-violet-200">
+      <h2 className="text-xl text-[100px] font-bold mb-4">Login asdf</h2>
       <input
         type="email"
         className="border p-2 mb-2 w-full"
