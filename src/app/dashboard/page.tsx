@@ -35,7 +35,7 @@ export default function Dashboard() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold">Welcome to Your Dashboard</h1>
+      <h1 className="text-2xl text-violet-700 font-bold">Welcome to Your Dashboard</h1>
       {user ? (
         <>
           <p className="mt-2">Logged in as {user.email}</p>
@@ -44,7 +44,7 @@ export default function Dashboard() {
           <AddWorkout />
 
           {/* ✅ Workout list */}
-          <div className="mt-6">
+          <div className="p-4 max-w-md mx-auto">
             <h2 className="text-xl font-semibold mb-2">All Workouts</h2>
             {workouts.length > 0 ? (
               <ul className="space-y-2">

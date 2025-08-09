@@ -57,7 +57,7 @@ export default function WorkoutsPage() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Workouts</h1>
+      <h1 className="text-2xl text-red-900 font-bold mb-4">Workouts</h1>
 
       {Object.entries(groupedWorkouts).map(([category, items]) => (
         <div key={category} className="mb-6">
