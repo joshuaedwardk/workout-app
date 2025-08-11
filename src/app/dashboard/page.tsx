@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import AddWorkout from "@/components/AddWorkout";
 
+
 export default function Dashboard() {
   const [user, setUser] = useState<any>(null);
   const [workouts, setWorkouts] = useState<any[]>([]);
