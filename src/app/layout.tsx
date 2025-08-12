@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Joshua Workout Application",
-  description: "Interesting",
+  title: "Workout Application",
+  description: "Joshua E Workout Application, moving away from Airtable",
 };
 
 export default function RootLayout({
